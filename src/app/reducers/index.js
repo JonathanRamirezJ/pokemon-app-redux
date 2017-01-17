@@ -1,8 +1,8 @@
 import {combineReducers} from 'redux';
-import {showPokemon} from './users';
+import {pokemon} from './pokemon';
 
 const rootReducer = combineReducers({
-  pokemon: showPokemon
+  pokemon
 });
 
 export default rootReducer;

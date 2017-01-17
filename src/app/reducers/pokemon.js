@@ -4,7 +4,7 @@ const initialState = {
   list: []
 };
 
-export function showPokemon(state = initialState, action) {
+export function pokemon(state = initialState, action) {
   switch (action.type) {
     case SHOW_POKEMON:
       return Object.assign({}, state, {list: action.payload});
