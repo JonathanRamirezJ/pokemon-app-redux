@@ -2,8 +2,9 @@ import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {showPokemon} from '../actions/index';
-
 import Card from '../components/Card';
+
+import {Grid} from 'react-bootstrap';
 
 class App extends Component {
 
@@ -14,21 +15,17 @@ class App extends Component {
   renderPokemonList() {
     return this.props.pokemon.map((poke, i) => {
       return (
-        <Card key={i} name={poke.name} url={poke.url}/>
+        <Card key={i} name={poke.name} url={poke.url} image={poke.imageUrl}/>
       );
     });
   }
 
   render() {
-    console.log(this.props);
-
     return (
-      <div>
-        <h2 className="text-center">Pokemon list V1</h2>
-        <ul>
-          {this.renderPokemonList()}
-        </ul>
-      </div>
+      <Grid>
+        <h2 className="text-center">Pokemon lists first Generation</h2>
+        {this.renderPokemonList()}
+      </Grid>
     );
   }
 }

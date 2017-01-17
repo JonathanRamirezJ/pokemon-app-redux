@@ -1,2 +1,3 @@
 export const SHOW_POKEMON = 'SHOW_POKEMON';
 export const FIND_ERROR = 'FIND_ERROR';
+export const SHOW_SINGLE_POKEMON = 'SHOW_SINGLE_POKEMON';
